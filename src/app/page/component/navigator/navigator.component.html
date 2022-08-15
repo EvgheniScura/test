@@ -1,0 +1,6 @@
+<div class="positionButton">
+  <button class="button" (click)="laudTable()">Pobierz dane</button>
+</div>
+<div *ngIf="serviceTableService.startLoauder">
+  <app-loader></app-loader>
+</div>

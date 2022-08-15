@@ -1,0 +1,31 @@
+<div class="box">
+  <div *ngIf="!serviceTableService.dataTable">
+    <samp style="text-align: center;" class="placeHolder" >Aby podciągnąć danne nacisnij przycisk</samp>
+  </div>
+  <div *ngIf="serviceTableService.dataTable">
+    <app-chart ></app-chart>
+    <div style="margin: 30px">
+      <div style="width: 100%; overflow:auto;">
+        <table>
+          <tr>
+            <th *ngFor="let name of tableCols">{{name.header}}</th>
+
+          </tr>
+          <tr *ngFor="let student of serviceTableService.dataTable ; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ student.name.first }} {{ student.name.last }}</td>
+            <td>{{ student.dob.date | date: 'yyyy-MM-dd' }}</td>
+            <td>{{ student.dob.age }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.location.country }}</td>
+            <td>{{ student.location.postcode }} {{ student.location.city }}</td>
+            <td>{{ student.location.street.name}} {{student.location.street.number}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="margin-top: 10px;">
+  <app-navigator></app-navigator>
+</div>
