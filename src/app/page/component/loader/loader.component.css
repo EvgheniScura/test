@@ -20,6 +20,7 @@
 }
 
 .laudcss {
+  z-index: 900;
   position: fixed;
   top: 0;
   right: 0;
@@ -27,13 +28,10 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.301);
   opacity: 0.75;
-  z-index: 900;
 }
 
 .body{
   padding: 20px;
   margin-top: 20%;
   background: rgba(205, 205, 205, 0);
-
-  /* margin: 40px; */
 }

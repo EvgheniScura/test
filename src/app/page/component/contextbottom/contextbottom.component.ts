@@ -10,21 +10,21 @@ export class ContextbottomComponent implements OnInit {
   constructor() { }
 
   stylText = 'textBlockwhite';
-  iteration: any;
+  iteration = 0;
 
   ngOnInit() {
     this.iteration = +sessionStorage.getItem('iteration')
     if(!this.iteration){
-      sessionStorage.setItem('iteration', '0');
+      sessionStorage.setItem('iteration', '1');
     } else {
       this.iteration++;
       sessionStorage.removeItem('iteration');
-      sessionStorage.setItem('iteration', this.iteration);
+      sessionStorage.setItem('iteration', this.iteration.toString());
     }
-    if(this.iteration === 5){
+    if(this.iteration === 6){
       this.stylText = 'textBlock';
       sessionStorage.removeItem('iteration');
-      sessionStorage.setItem('iteration', '0');
+      sessionStorage.setItem('iteration', '1');
     }
 
   }

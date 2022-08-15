@@ -8,7 +8,7 @@ import { NavigatorComponent } from './page/component/navigator/navigator.compone
 import { HttpClientModule } from '@angular/common/http';
 import { CoreApiService } from './core/services/core-api-service';
 import { CoreAppConfigService } from './core/services/core-app-config.service';
-import { SearchNamePipe } from './pipe/pipes/search-name.pipe';
+
 import { FormsModule } from '@angular/forms';
 import { ChartComponent } from './page/component/chart/chart.component';
 import { ContextbottomComponent } from './page/component/contextbottom/contextbottom.component';
@@ -25,7 +25,6 @@ export function loadConfigFile(config: CoreAppConfigService) {
     TableComponent,
     ContextComponent,
     NavigatorComponent,
-    SearchNamePipe,
     ChartComponent,
     ContextbottomComponent,
     LoaderComponent,

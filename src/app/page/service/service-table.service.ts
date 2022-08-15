@@ -15,7 +15,7 @@ export class ServiceTableService  extends CoreDataService{
 
 
     getData(): Observable<Array<any>> {
-        const url = `${this.appConfig.getBaseApiUrl()}` // get użytkownik
+        const url = `${this.appConfig.getBaseApiUrl()}` // get users
         return this.apiService.get<any>(url)
     }
 

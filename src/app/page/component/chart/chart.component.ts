@@ -18,8 +18,6 @@ export class ChartComponent implements OnInit {
    myChart: ElementRef;
 
 
-
-
   constructor( public serviceTableService : ServiceTableService) {
 
    }
@@ -50,10 +48,6 @@ export class ChartComponent implements OnInit {
 
 
   ngOnInit() {
-
-    console.log('this.element')
-    console.log(this.serviceTableService.stepNumber)
-
   }
 
 
